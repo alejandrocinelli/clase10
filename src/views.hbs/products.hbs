@@ -1,0 +1,35 @@
+<h2>Lista de Products</h2>
+
+{{#if products.length}}
+    <div class="table-responsive tabla">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre </th>
+                    <th scope="col"> Precio </th>
+                    <th scope="col"> Foto </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                    <tr>
+                        <th scope="row"> {{this.name}}</th>
+                        <th scope="row"> {{this.price}}</th>
+                        <th scope="row"> <img src="{{this.thumbnail}}" alt="imagen" width="50" /> </th>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>    
+    </div>
+{{else}}    
+    <h2>No se encontraron productos </h2>
+{{/if}}
+
+<button id="formButton">Cargar Productos</button>
+
+<script>
+    const  formButton = document.getElementById('formButton')
+    formButton.addEventListener('click', (event) => {
+        window.location= "/";
+    });
+</script>

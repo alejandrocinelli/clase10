@@ -1,0 +1,16 @@
+<h2>Carga de prodcutos</h2>
+    <form action="/product" method="post" ><br>
+        <input type="text" name="name" placeholder="name"> <br>
+        <input type="number" name="price" placeholder="price"> <br>
+        <input type="text" name="thumbnail" placeholder="Imagen"> <br><br>
+        <input type="submit" value="Cargar producto">
+
+    </form><br><br><br>
+
+    <button id="buttonForm">Ver Productos</button> 
+    <script>
+        const buttonForm = document.getElementById('buttonForm');
+        buttonForm.addEventListener('click', (event) => {
+           window.location = '/products';
+        })
+    </script>
