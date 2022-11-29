@@ -1,0 +1,26 @@
+extends main.pug 
+
+block datos 
+    h2 Ver productos 
+    br
+
+    if products.length > 0  
+      
+      table(class="table table-dark table-striped")
+                thead 
+                    tr 
+                        th(scope="col") Nombre
+                        th(scope="col") Precio
+                        th(scope="col") Foto
+                tbody 
+                    each producto in products
+                        tr
+                            th(scope="row")=producto.name
+                            th(scope="row")=producto.price
+                            th(scope="row"): img(src=producto.thumbnail alt="imagen" width="50") 
+        
+     
+    else 
+       h3 No hay productos cargados
+ 
+    button(type="button" onclick="window.location.href='/'") Agregar producto

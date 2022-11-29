@@ -1,0 +1,21 @@
+extends main.pug 
+
+block datos
+    h1= title 
+    h2 Agregar producto 
+    br
+    form(action="/products" method="post")
+        
+        input(type="text" name="name" id="name" placeholder="Name") 
+        br
+        
+        input(type="number" name="price" id="price" placeholder="Price")
+        br
+        
+        input(type="text" name="thumbnail" id="url" placeholder="url imagen")
+        br
+        br
+        button(type="submit") Cargar product 
+        br
+        br
+        button(type="button" onclick="window.location.href='/products'") Ver Productos

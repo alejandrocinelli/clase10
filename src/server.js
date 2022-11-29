@@ -12,8 +12,16 @@ const app = express();
 app.use(json());
 app.use(urlencoded({ extended: true }));
 
+// seteamos para que use ejs como motor de plantillas
+/*
 app.set("view engine", "ejs"); 
 app.set("views", __dirname + "/views");
+*/
+
+// seteamos para que use pug como motor de plantillas
+
+app.set("view engine", "pug");
+app.set("views", __dirname + "/views.pug");
 
 app.use("/", routes);
 
